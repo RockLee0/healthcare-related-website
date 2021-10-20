@@ -4,11 +4,10 @@ import { Link } from 'react-router-dom';
 const Card = (props ) => {
     const {img,Description, Doctor}=props.doctor;
     const [doctorInfo,setDoctorInfo]=useState({});
-
-    const seeDetail=() =>{
-    setDoctorInfo(props.doctor)
-
+     const doctor=()=>{
+        setDoctorInfo(props);
     }
+
     return (
         <div>
 
@@ -21,7 +20,7 @@ const Card = (props ) => {
           <h3 className="fw-bold py-3">{Doctor}</h3> 
           <h4>Description :{Description}</h4>
           <Link to="/ServiceDetail">
-              <button>See Details</button>
+              <button doctor={doctor}>See Details</button>
           </Link>
           
           

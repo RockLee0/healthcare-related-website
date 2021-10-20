@@ -1,9 +1,12 @@
 import React from 'react';
 
-const ServiceDetail = () => {
+const ServiceDetail = (props) => {
+    const {Doctor,Description,ContactNumber}=props.doctor;
     return (
         <div>
-            Hellowvvvv
+            Name : {Doctor}
+            Description: {Description}
+            ContactNumber: {ContactNumber}
         </div>
     );
 };
